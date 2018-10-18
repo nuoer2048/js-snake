@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Title Page</title>
+
+		<!-- Bootstrap CSS -->
+		<link href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		
+		<canvas id="myCan" width="600px" height="600px" style="margin-left: 30%;">
+			Drawing of something
+		</canvas>
+
+		<!-- jQuery -->
+		<script src="//code.jquery.com/jquery.js"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			var c=document.getElementById("myCan"); 
+          var ctx=c.getContext("2d");        
+          ctx.strokeStyle="#000000";
+          ctx.strokeRect(0,0,600,600);
+          var num = 600/20;
+          for(var i = 1; i < num;i++)
+          {
+          	ctx.beginPath();
+          	ctx.moveTo(0,i*20);
+          ctx.lineTo(600,i*20);
+          ctx.stroke();
+
+          }
+           for(var i = 1; i < num;i++)
+          {
+          	ctx.beginPath();
+          	ctx.moveTo(i*20,0);
+          ctx.lineTo(i*20,600);
+          ctx.stroke();
+
+          }
+
+               
+		</script>
+	</body>
+</html>

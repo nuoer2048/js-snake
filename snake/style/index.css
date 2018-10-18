@@ -1,0 +1,23 @@
+
+.map{
+	/*background: #8B8F88D2;*/
+	position: relative;
+	width: 800px;
+	height: 600px;
+	margin: 10px auto;
+}
+.score,#start,#pa{
+	width: 100px;
+	height: 50px;
+	background: #D0F0F0DB;
+    margin-left: -200px;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 30px;
+}
+#myCan{
+     position: absolute;
+     top: 70px;
+     left: -6%;
+}

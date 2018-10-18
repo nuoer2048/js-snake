@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Title Page</title>
+		
+		<link href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="style/index.css">
+
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<h1>贪吃蛇</h1>
+	
+<div class="map">
+	<div class="score" id="score" >0分</div>
+	
+	<button type="button" class="btn btn-default" id="start">start</button>
+	<button type="button" class="btn btn-default" id="pa">pause</button>
+</div>
+   <canvas id="myCan" width="800px" height="600px" style="margin-left: 30%;">
+			Drawing of something
+		</canvas>
+
+		<p>上下左右键控制方向，start蛇自动移动，pause停止自动移动</p>
+
+
+	<script src="//code.jquery.com/jquery.js"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		<script src="Food.js"></script>
+		<script type="text/javascript" src="Snake.js"></script>
+         <script src="Game.js"></script>
+
+
+		<script type="text/javascript">
+	$(function (argument) {
+	
+	 Game.init($('.map'))
+	 	var c=document.getElementById("myCan"); 
+          var ctx=c.getContext("2d");        
+          ctx.strokeStyle="#000000";
+          ctx.strokeRect(0,0,800,600);
+          var num = 600/20;
+          for(var i = 1; i < num;i++)
+          {
+          	
+          	ctx.beginPath();
+          	ctx.moveTo(0,i*20);
+          ctx.lineTo(800,i*20);
+          ctx.stroke();
+
+          }
+          var n = 800/20
+           for(var i = 1; i <n;i++)
+          {
+          	ctx.beginPath();
+          	ctx.moveTo(i*20,0);
+          ctx.lineTo(i*20,800);
+          ctx.stroke();
+
+          }
+		
+	})
+
+		</script>
+		
+	</body>
+</html>
